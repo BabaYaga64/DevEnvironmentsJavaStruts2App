@@ -27,15 +27,12 @@ Password: bojana
 
 Database commands:
 
-```CREATE DATABASE devenviron;
+CREATE DATABASE devenviron;
 USE devenviron;
 CREATE TABLE environments (name VARCHAR (255));
 ALTER TABLE environments ADD id serial PRIMARY KEY;
 CREATE TABLE attributes (environ_id INT, version VARCHAR (255), notes VARCHAR (255));
 ALTER TABLE attributes ADD id serial PRIMARY KEY;
-
-```
-
 
 
 ###Setup Instructions
