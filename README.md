@@ -6,7 +6,7 @@
 
 ###Description
 
-This app takes 3 user inputs: Operating System (0S), Operating System Version (OS Version), and Notes. After they are submitted to the database, the inputs are displayed on a second page. The technologies used in this app are the Java language, the Mvthe Struts2 web framework, and MySQL for the database.
+This app takes 3 user inputs: Operating System (OS), Operating System Version (OS Version), and Notes. After they are submitted to the database, the inputs are displayed on a second page. The technologies used in this app are the Java language, the Mvthe Struts2 web framework, and MySQL for the database.
 
 ###Technologies Used:
 
