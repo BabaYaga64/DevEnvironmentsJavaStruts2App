@@ -16,6 +16,8 @@ This app takes 3 user inputs: Operating System (0S), Operating System Version (O
 * MySQL
 * MYSQL Connector/J driver
 * Sql2o
+* Hibernate 
+* Apache Tomcat
 
 
 
@@ -27,12 +29,12 @@ Password: bojana
 
 Database commands:
 
-CREATE DATABASE devenviron;
-USE devenviron;
-CREATE TABLE environments (name VARCHAR (255));
-ALTER TABLE environments ADD id serial PRIMARY KEY;
-CREATE TABLE attributes (environ_id INT, version VARCHAR (255), notes VARCHAR (255));
-ALTER TABLE attributes ADD id serial PRIMARY KEY;
+1. CREATE DATABASE devenviron;
+2. USE devenviron;
+3. CREATE TABLE environments (name VARCHAR (255));
+4. ALTER TABLE environments ADD id serial PRIMARY KEY;
+5. CREATE TABLE attributes (environ_id INT, version VARCHAR (255), notes VARCHAR (255));
+6. ALTER TABLE attributes ADD id serial PRIMARY KEY;
 
 
 ###Setup Instructions
