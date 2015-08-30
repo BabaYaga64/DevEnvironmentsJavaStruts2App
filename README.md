@@ -15,8 +15,6 @@ This app takes 3 user inputs: Operating System (OS), Operating System Version (O
 * Struts2
 * MySQL
 * MYSQL Connector/J driver
-* Sql2o
-* Hibernate 
 * Apache Tomcat Server
 
 
