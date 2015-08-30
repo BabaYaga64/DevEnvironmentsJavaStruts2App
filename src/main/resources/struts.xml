@@ -3,13 +3,8 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
     <package name="default" extends="struts-default">
-        <action name="backup" class="DevEnvironAction" method="backup">
+        <action name="devenviron" class="DevEnvironAction" method="execute">
             <result name="success">index.jsp</result>
-            <result name="error">index.jsp</result>
-        </action>
-        <action name="restore" class="DevEnvironAction" method="restore">
-            <result name="success">index.jsp</result>
-            <result name="error">index.jsp</result>
         </action>
     </package>
 </struts>
