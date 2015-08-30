@@ -6,7 +6,7 @@
 
 ###Description
 
-This app takes 3 user inputs: Operating System (OS), Operating System Version (OS Version), and Notes. After they are submitted to the database, the inputs are displayed on a second page. The technologies used in this app are the Java language, the Mvthe Struts2 web framework, and MySQL for the database.
+This app takes 3 user inputs: Operating System (OS), Operating System Version (OS Version), and Notes. After they are submitted to the database, the inputs are displayed on a second page. The technologies used in this app are the Java language, the Struts2 web framework, MySQL for the database, and Maven to manage other dependencies. Additional dependencies are listed below.
 
 ###Technologies Used:
 
@@ -17,7 +17,7 @@ This app takes 3 user inputs: Operating System (OS), Operating System Version (O
 * MYSQL Connector/J driver
 * Sql2o
 * Hibernate 
-* Apache Tomcat
+* Apache Tomcat Server
 
 
 
