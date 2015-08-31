@@ -15,6 +15,7 @@ This app takes 3 user inputs: Operating System (OS), Operating System Version (O
 * Struts2
 * MySQL
 * MYSQL Connector/J driver
+* JDBC 
 * Apache Tomcat Server
 
 
@@ -31,15 +32,19 @@ Database commands:
 2. USE devenviron;
 3. CREATE TABLE environments (name VARCHAR (255));
 4. ALTER TABLE environments ADD id serial PRIMARY KEY;
-5. CREATE TABLE attributes (environ_id INT, version VARCHAR (255), notes VARCHAR (255));
-6. ALTER TABLE attributes ADD id serial PRIMARY KEY;
+5. ALTER TABLE environments ADD version text;
+6. ALTER TABLE environments ADD notes text;
+7. ALTER TABLE environments ADD os_notes text;
+8. INSERT INTO environments (name, version, os_notes) VALUES ('Mac OS', '10.10', 'My favorite');
+9. INSERT INTO environments (name, version, os_notes) VALUES ('Linux', 'Mint', 'Never tried this one');
 
 
 ###Setup Instructions
 
     1. Clone GitHub repository.
-
-
+    2.
+       
+       
 ###The MIT License (MIT)
 
 Copyright (c) 2015 Bojana Skarich
