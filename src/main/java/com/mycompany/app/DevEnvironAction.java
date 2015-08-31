@@ -3,54 +3,57 @@ package com.mycompany.app;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-//declare action class
+  //declare action class
   public class DevEnvironAction {
 
-    //declare table properties
-     private String name;
-     private String version;
-     private String os_notes;
+      //declare table properties
+      private String name;
+      private String version;
+      private String os_notes;
 
-        public String execute() {
-          String ret = ERROR;
-          Connection conn = null;
+      public String execute() {
+        String ret = ERROR;
+        Connection conn = null;
 
-          //Register a JDBC driver
-          try {
-             String URL = "jdbc:mysql://localhost/devenviron";
-             Class.forName("com.mysql.jdbc.Driver");
-             conn = DriverManager.getConnection(URL, "bojana", "bojana");
-             String sql = "SELECT name FROM login WHERE";
-             sql += " user = ? AND password = ?";
+        //Register a JDBC driver
+        try {
+            String URL = "jdbc:mysql://localhost/devenviron";
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection(URL, "bojana", "bojana");
+            String sql = "SELECT name FROM login WHERE";
+            sql += " name = ? AND version = ? AND os_notes";
+            PreparedStatement ps = conn.prepareStatement(sql);
 
-         }//Ends Class.forName()
 
-       }//Ends execute()
 
-     //Getters and Setters for above properties
-     public String getName() {
-        return name;
-     }//Ends getName
+        }//Ends Class.forName()
 
-     public void setName(String name) {
-         this.name = name;
-     }//Ends setName
+      }//Ends execute()
 
-     public String getVersion() {
-        return version;
-     }//Ends getVersion
+      //Getters and Setters for above properties
+      public String getName() {
+          return name;
+      }//Ends getName
 
-     public void setVersion(String version) {
-         this.version = version;
-     }//Ends setVersion
+      public void setName(String name) {
+          this.name = name;
+      }//Ends setName
 
-     public String getOs_notes() {
-         return os_notes;
-     }//Ends getOs_notes
+      public String getVersion() {
+          return version;
+      }//Ends getVersion
 
-    public void setOs_notes(String os_notes) {
-        this.os_notes = os_notes;
-    }//Ends setOs_notes
+      public void setVersion(String version) {
+          this.version = version;
+      }//Ends setVersion
 
-}//End DevEnvironAction class declaration
+      public String getOs_notes() {
+          return os_notes;
+      }//Ends getOs_notes
+
+      public void setOs_notes(String os_notes) {
+          this.os_notes = os_notes;
+      }//Ends setOs_notes
+
+  }//End DevEnvironAction class declaration
 

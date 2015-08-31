@@ -1,3 +1,5 @@
+<!-- This is the first page that the user sees, and inputs values-->
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -16,7 +18,7 @@
         <br>
         <s:textfield name="notes" label="Notes"</s:textfield>
         <br>
-        <s:submit value="submit"></s:submit>
+        <s:submit method="execute" value="submit"></s:submit>
     </s:form>
   </body>
 </html>
