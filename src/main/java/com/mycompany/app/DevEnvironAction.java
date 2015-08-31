@@ -11,8 +11,7 @@ package com.mycompany.app;
          this.name = name;
      }
 
-     @Override
      public String execute throws Exception {
-         return "Success";
+         return "success";
      }
  }
