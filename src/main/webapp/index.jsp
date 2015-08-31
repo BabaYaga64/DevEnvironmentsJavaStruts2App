@@ -1,31 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Development Environments</title>
-	<meta name="description" content="">
-  <!-- Mobile-friendly viewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- Style sheet link -->
-	<link href="css/main.css" rel="stylesheet" media="all">
-</head>
-<body>
-<h1>Welcome to my app!</h1>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
 
-<h3>What kind of development environment do you use? Enter your answer below</h3>
-
-    <!-- Add action name and post method here after configuring the same in struts.xml -->
-  <form action="devenviron">
-    Operating System:<br>
-    <input type="text" name="opsystem">
-    <br>
-    Operating System Version:<br>
-    <input type="text" name="opsystemvers">
-    <br>
-    Notes:<br>
-    <input type="text" name="notes">
-    <br><br>
-      <input type="submit" value="Submit">
-  </form>
-</body>
+    <body>
+      <h1>Welcome to my app!</h1>
+      <h3>What kind of development environment do you use? Enter your answer below</h3>
+        <s:form action="devenviron">
+        <s:textfield name="operating_system" label="Operating System"</s:textfield>             <br>
+        <s:textfield name="operating_system_version" label="Operating System Version"</s:textfield>
+        <br>
+        <s:textfield name="notes" label="Notes"</s:textfield>
+        <br>
+        <s:submit value="submit"></s:submit>
+    </s:form>
+  </body>
 </html>
