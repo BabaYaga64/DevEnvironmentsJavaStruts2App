@@ -27,9 +27,22 @@ import java.sql.*;
                   "VALUES ('Windows', '7', 'Better than 8)");
 
           //Select statements
+          Statement stmt = conn.createStatement();
+          ResultSet rs = stmt.executeQuery("SELECT name FROM environments WHERE name = 'Mac OS');
+          ResultSet rs = stmt.executeQuery("SELECT name FROM environments WHERE name = 'Linux');
+          ResultSet rs = stmt.executeQuery("SELECT name FROM environments WHERE name = 'Windows');
 
 
-          conn.close();
+          while (rs.next()) {
+            String name = rs.getString("name");
+            String version = rs.getString("version");
+            String os_notes = rs.getString("os_notes");
+            System.out.println(name + "/n");
+            System.out.println(version + "/n");
+            System.out.println(os_notes + "/n");
+
+          }//End while loop
+            conn.close();
       }//End try
         catch (Exception e)
         {

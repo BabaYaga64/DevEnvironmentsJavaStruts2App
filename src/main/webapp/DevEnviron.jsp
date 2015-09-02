@@ -14,5 +14,8 @@
    DevEnviron, <s:property value="name"/>
    DevEnviron, <s:property value="version"/>
    DevEnviron, <s:property value="os_notes"/>
+
+<p><a href="index.jsp">Return to home page</a>.</p>
 </body>
+
 </html>
