@@ -17,8 +17,16 @@ import java.sql.*;
         String url = "jdbc:mysql://localhost/devenviron)";
         Connection conn = DriverManager.getConnection(url, "bojana", "bojana");
         Statement st = conn.createStatement();
-          //Insert statements
 
+          //Insert statements
+          st.executeUpdate("INSERT INTO environments " +
+                  "VALUES ('Mac OS', '10.10', 'My favorite one)");
+          st.executeUpdate("INSERT INTO environments " +
+                  "VALUES ('Linux', 'Mint', 'Never tried this one)");
+          st.executeUpdate("INSERT INTO environments " +
+                  "VALUES ('Windows', '7', 'Better than 8)");
+
+          //Select statements
 
 
           conn.close();

@@ -35,7 +35,7 @@ Database commands:
 5. ALTER TABLE environments ADD version text;
 6. ALTER TABLE environments ADD notes text;
 7. ALTER TABLE environments ADD os_notes text;
-8. INSERT INTO environments (name, version, os_notes) VALUES ('Mac OS', '10.10', 'My favorite');
+8. INSERT INTO environments (name, version, os_notes) VALUES ('Mac OS', '10.10', 'My favorite one');
 9. INSERT INTO environments (name, version, os_notes) VALUES ('Linux', 'Mint', 'Never tried this one');
 
        
