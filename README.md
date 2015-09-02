@@ -38,12 +38,6 @@ Database commands:
 8. INSERT INTO environments (name, version, os_notes) VALUES ('Mac OS', '10.10', 'My favorite');
 9. INSERT INTO environments (name, version, os_notes) VALUES ('Linux', 'Mint', 'Never tried this one');
 
-
-###Setup Instructions
-
-    1. Clone GitHub repository.
-    2.
-       
        
 ###The MIT License (MIT)
 

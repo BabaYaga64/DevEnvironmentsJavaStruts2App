@@ -1,34 +1,34 @@
 package com.mycompany.app;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
 
   //declare action class
-  public class DevEnvironAction {
+  class DevEnvironAction {
 
-      //declare table properties
-      private String name;
-      private String version;
-      private String os_notes;
+    //Declare table properties
+    private String name;
+    private String version;
+    private String os_notes;
 
-      public String execute() {
-        String ret = ERROR;
-        Connection conn = null;
-
-        //Register a JDBC driver
-        try {
-            String URL = "jdbc:mysql://localhost/devenviron";
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(URL, "bojana", "bojana");
-            String sql = "SELECT name FROM login WHERE";
-            sql += " name = ? AND version = ? AND os_notes";
-            PreparedStatement ps = conn.prepareStatement(sql);
+    //Register a JDBC driver and connect to database
+    public static void main (String[] args) {
+      try {
+        Class.forName("com.mysql.jdbc.Driver");
+        String url = "jdbc:mysql://localhost/devenviron)";
+        Connection conn = DriverManager.getConnection(url, "bojana", "bojana");
+        Statement st = conn.createStatement();
+          //Insert statements
 
 
 
-        }//Ends Class.forName()
-
-      }//Ends execute()
+          conn.close();
+      }//End try
+        catch (Exception e)
+        {
+          System.err.println("Got an exception! ");
+          System.err.println(e.getMessage());
+        }//end catch
+    }//Ends main
 
       //Getters and Setters for above properties
       public String getName() {
