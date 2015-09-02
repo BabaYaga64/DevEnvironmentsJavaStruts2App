@@ -27,29 +27,33 @@ import java.sql.*;
                   "VALUES ('Windows', '7', 'Better than 8)");
 
           //Select statements
+          String sql = "SELECT * FROM environments";
           Statement stmt = conn.createStatement();
-          ResultSet rs = stmt.executeQuery("SELECT name FROM environments WHERE name = 'Mac OS');
-          ResultSet rs = stmt.executeQuery("SELECT name FROM environments WHERE name = 'Linux');
-          ResultSet rs = stmt.executeQuery("SELECT name FROM environments WHERE name = 'Windows');
+          ResultSet rs = stmt.executeQuery(sql);
 
-
+          // Loop through result set
           while (rs.next()) {
             String name = rs.getString("name");
             String version = rs.getString("version");
             String os_notes = rs.getString("os_notes");
+
+
             System.out.println(name + "/n");
             System.out.println(version + "/n");
             System.out.println(os_notes + "/n");
-
           }//End while loop
-            conn.close();
+
+          //End result set, statement and connection
+          rs.close() ;
+          stmt.close() ;
+          conn.close();
+
       }//End try
-        catch (Exception e)
-        {
-          System.err.println("Got an exception! ");
-          System.err.println(e.getMessage());
-        }//end catch
-    }//Ends main
+
+        catch (SQLException ex) {
+          ex.printStackTrace();
+        }//End catch
+    }//End main
 
       //Getters and Setters for above properties
       public String getName() {
