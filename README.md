@@ -38,6 +38,14 @@ Database commands:
 8. INSERT INTO environments (name, version, os_notes) VALUES ('Mac OS', '10.10', 'My favorite one');
 9. INSERT INTO environments (name, version, os_notes) VALUES ('Linux', 'Mint', 'Never tried this one');
 
+###Setup instructions:
+
+1. Clone repository from GitHub.
+2. Make sure that you have MySQL installed on your machine. 
+3. Create and connect to the database devenviron according to the instruction above. 
+4. Start an instance of Apache Tomcat server. 
+5. Point server to this address: localhost:8080/my-app/index.jsp
+
        
 ###The MIT License (MIT)
 
