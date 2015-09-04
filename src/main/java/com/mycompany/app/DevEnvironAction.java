@@ -11,11 +11,12 @@ import java.sql.*;
     private String os_notes;
 
     //Register a JDBC driver and connect to database
-    public static void main (String[] args) {
+    public static void main (String[] args)  {
+      Connection conn = null;
       try {
         Class.forName("com.mysql.jdbc.Driver");
         String url = "jdbc:mysql://localhost/devenviron)";
-        Connection conn = DriverManager.getConnection(url, "bojana", "bojana");
+        conn = DriverManager.getConnection(url, "bojana", "bojana");
         Statement st = conn.createStatement();
 
           //Insert statements
@@ -47,12 +48,24 @@ import java.sql.*;
           rs.close() ;
           stmt.close() ;
           conn.close();
-
       }//End try
-
-        catch (SQLException ex) {
-          ex.printStackTrace();
-        }//End catch
+        catch(SQLException se) {
+          se.printStackTrace();
+        }//End catch1
+        catch(Exception e) {
+          //Handle errors for Class.forName
+          e.printStackTrace();
+        }//End catch2
+      finally {
+        //Finally block closes resources
+        try {
+          if(conn!=null)
+            conn.close();
+        }//End try
+        catch(SQLException se) {
+          se.printStackTrace();
+        }//End catch3
+      }//End finally
     }//End main
 
       //Getters and Setters for above properties
